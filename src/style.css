@@ -1,0 +1,83 @@
+:root {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  font-weight: bold;
+  color-scheme: dark;
+  background-color: #1a101a; /* Default body background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #1a101a;
+}
+
+/* Container styles set by JS now */
+#game-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  /* background-color and box-shadow set in game.ts applyTheme */
+}
+
+#gameCanvas {
+  display: block;
+}
+
+/* General positioning and font styles for UI elements */
+#score, #message, #instructions, #game-over {
+  position: absolute;
+  font-size: 1.6em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.4); /* Keep subtle background */
+  font-weight: bold;
+  /* Colors and text-shadows set in game.ts applyTheme */
+}
+
+#score {
+  top: 15px;
+  left: 15px;
+}
+
+#message {
+  top: 60px;
+  left: 15px;
+  font-style: normal;
+}
+
+#instructions {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.8); /* Can keep this default */
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#game-over {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 35px;
+  border-radius: 10px;
+  border-width: 3px; /* Keep border width */
+  border-style: solid; /* Keep border style */
+  /* Color, border-color, text-shadow set in game.ts applyTheme */
+}
+
+.hidden {
+  display: none;
+}

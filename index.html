@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Ensure viewport settings prevent zooming and fit screen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Geo Runner</title>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <div id="game-container">
+      <canvas id="gameCanvas"></canvas>
+      <div id="score">Score: 0</div>
+      <!-- Message element now also shows bonus timer -->
+      <div id="message" class="hidden"></div>
+      <div id="instructions">Tap or Space to jump!</div>
+      <div id="game-over" class="hidden">
+        Game Over! <br> Tap/Space to restart.
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
